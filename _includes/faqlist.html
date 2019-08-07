@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <div class="row rdk-faq-openlist">
+    <div class="col-md-12">
+      {% for data in page.faqlist %}
+        <h3>{{data.title}}</h3>
+        {% for faq in data.qalist %}
+        <div class="row">
+          <div class="col-md-12">
+            <h5 class="rdk-faq-question">{{ faq.question }}</h5>
+            <div class="rdk-faq-answer">{{ faq.answer }}</div>
+          </div>
+        </div>
+        {% endfor %}
+      {% endfor %}
+    </div>
+  </div>
+</div>

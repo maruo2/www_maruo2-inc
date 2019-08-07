@@ -1,0 +1,80 @@
+{% include header.html %}
+<nav class="navbar navbar-default">
+<div class="container-fluid rdk-navblock">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rdk-navbar-collapse-1" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="{{site.url}}/{{ page.lang.value }}/">{% include logo.html %}</a>
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="rdk-navbar-collapse-1">
+  <ul class="nav navbar-nav">
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button">Language <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="{{site.url}}/en/order/">English</a></li>
+            <li><a href="{{site.url}}/ja/order/">日本語</a></li>
+        </ul>
+    </li>
+  </ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+
+
+<div class="container-fluid">
+      <div class="row rdk-order-header">
+        <div class="col-md-2"></div>
+        <div class="col-md-8 rdk-order-countrybox">
+          <h2>Shipping country</h2>
+          <select name="rdkSelectCountryForOrder" id="rdkSelectCountryForOrder">
+            <option value="">Select Country</option>
+            {% for data in page.countrylist %}
+            <option value="{{ data.val }}">{{ data.name }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col-md-2"></div>
+      </div>
+      <div class="row rdk-order-content">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8">
+          {{ content }}
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row rdk-order-content">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8 rdk-order-check">
+          {{ page.checkword }}<br/>
+          <button id="rdkOrder" disabled type="button" class="rdk-order rdk-order-agree" onClick="handleOrderLinkClicks()">{{page.agreebutton}}</button>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+      <div class="row rdk-order-footer">
+        <div class="col-md-12">
+        </div>
+      </div>
+</div>
+<script>
+$("#rdkSelectCountryForOrder").change( function(){
+    if ($('option:selected').val()!="") {
+      $("#rdkOrder").prop("disabled", false);
+    }else{
+      $("#rdkOrder").prop("disabled", true);
+    }
+});
+</script>
+{% include footer.html %}

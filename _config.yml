@@ -1,0 +1,23 @@
+title: maruo2-inc
+url: "https://ricohr.github.io/www_node"
+youtubeurl: "https://www.youtube.com/channel/UCf0c8Y4ArMwgr5lg40dbyYA"
+forumsurl: "https://forums.ricohr.ricoh"
+staticurl: "http://static.ricohr.ricoh"
+
+githuburl: "https://github.com/ricohr"
+githuburlconsole: "https://github.com/ricohr/ricoh-r-console"
+githuburluvccapture: "https://github.com/ricohr/ricoh-r-dk-uvc-capture"
+githuburlfirmware: "https://github.com/ricohr/r-dk-firmware"
+githuburlmtpreference: "https://github.com/ricohr/MTP-reference"
+githuburlwinhelper: "https://github.com/ricohr/win-mtphelper"
+githuburlmachelper: "https://github.com/ricohr/osx-mtphelper"
+
+contacturlproductja: "https://webform.ricoh.com/form/pub/e00017/ricoh_r_ja"
+contacturlproducten: "https://webform.ricoh.com/form/pub/e00018/ricoh_r_en"
+contacturlshipping: "https://secure.shop-pro.jp/?mode=inq&shop_id=PA01398322&_ga=2.177152934.2024765134.1520914981-468081063.1519697440"
+
+googleAnalyticsTrackingId: UA-88351084-2
+
+# Build settings
+markdown: kramdown
+theme: minima

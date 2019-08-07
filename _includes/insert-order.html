@@ -1,0 +1,7 @@
+<div class="row">
+  {% if page.lang.value == 'ja' %}
+  <div class="col-md-12 rdk-order-div">
+    <button type="button" class="rdk-order" onClick="window.open('{{site.url}}/{{page.lang.value}}/order/')">{{page.sitewordshash.buybotton}}</button>
+  </div>
+  {% endif %}
+</div>

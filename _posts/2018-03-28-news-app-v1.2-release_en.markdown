@@ -1,0 +1,17 @@
+---
+layout: post
+title:  "Notification about camera firmware and RICOH R Console update"
+date:   2018-03-28 09:00:00 +0900
+category: news_en
+lang:
+  value: en
+---
+
+The camera firmware and image control tool RICOH R Console have been updated.  
+The change is as follows:  
+・Sleep mode support  
+  
+
+
+Firmware　： <a href='https://github.com/ricohr/r-dk-firmware/releases/latest' target='_blank'>https://github.com/ricohr/r-dk-firmware/releases/latest</a>    
+RICOH R Console ： <a href='https://github.com/ricohr/ricoh-r-console/releases/latest' target='_blank'>https://github.com/ricohr/ricoh-r-console/releases/latest</a>

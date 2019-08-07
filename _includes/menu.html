@@ -1,0 +1,45 @@
+<nav class="navbar navbar-default">
+<div class="container-fluid rdk-navblock">
+<!-- Brand and toggle get grouped for better mobile display -->
+<div class="navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#rdk-navbar-collapse-1" aria-expanded="false">
+    <span class="sr-only">Toggle navigation</span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="{{site.url}}/{{ page.lang.value }}/">maruo2-inc</a>
+</div>
+
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="collapse navbar-collapse" id="rdk-navbar-collapse-1">
+  <ul class="nav navbar-nav">
+    <li><a href="{{site.url}}/{{ page.lang.value }}/#news">News</a></li>
+    <li><a href="{{site.url}}/{{ page.lang.value }}/#product">Product</a></li>
+    <li><a href="{{site.url}}/{{ page.lang.value }}/#sample">Sample</a></li>
+    <li><a href="{{site.url}}/{{ page.lang.value }}/#developers">Developers</a></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button">Contact <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+          {% if page.lang.value == 'en' %}
+            <li><a href="{{site.contacturlproducten}}" target="_blank">Product/Specification</a></li>
+            {% endif %}
+          {% if page.lang.value == 'ja' %}
+            <li><a href="{{site.contacturlproductja}}" target="_blank">製品/仕様に関して</a></li>
+            <li><a href="{{site.contacturlshipping}}" target="_blank">注文/納期に関して</a></li>
+          {% endif %}
+        </ul>
+    </li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" role="button">Language <span class="caret"></span></a>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="{{site.url}}/en/">English</a></li>
+            <li><a href="{{site.url}}/ja/">日本語</a></li>
+        </ul>
+    </li>
+  </ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>

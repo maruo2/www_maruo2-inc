@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row rdk-news-archive">
+    <div class="col-md-12">
+      <h1>{{ page.titlehash.maintitle }}</h1>
+        {% if page.lang.value == 'en' %}
+          {% for post in site.categories.news_en %}
+          <div class="row rdk-news-archive-row">
+              <div class="col-md-3"></div>
+              <div class="col-md-4">
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+              </div>
+              <div class="col-md-2">
+                {{ post.date | date_to_string }}
+              </div>
+              <div class="col-md-3"></div>
+          </div>
+          {% endfor %}
+        {% endif %}
+        {% if page.lang.value == 'ja' %}
+          {% for post in site.categories.news_ja %}
+          <div class="row rdk-news-archive-row">
+              <div class="col-md-3"></div>
+              <div class="col-md-4">
+                  <a href="{{ post.url }}">{{ post.title }}</a>
+              </div>
+              <div class="col-md-2">
+                {{ post.date | date_to_string }}
+              </div>
+              <div class="col-md-3"></div>
+          </div>
+          {% endfor %}
+        {% endif %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,85 @@
+<div class="container-fluid">
+    <div class="row rdk-mainimage">
+      <img src="{{site.url}}/img/kuma-top-left.jpg" class="rdk-img-responsive" />
+    </div>
+
+    <div id="product"></div>
+    <div class="row rdk-product rdk-product-relative visible-lg">
+      <div class="rdk-product-absolute">
+        <h4>{{page.sitewordshash.productmain}}</h4>
+        <div class="desc">{{page.sitewordshash.productsub}}</div>
+        <ul>
+          {% for data in page.productlist %}
+          <li>{{data}}</li>
+          {% endfor %}
+        </ul>
+        <button type="button" class="rdk-product-manual" onClick="window.open('{{site.url}}/{{page.lang.value}}/manual/')">{{page.sitewordshash.manual}}</button>
+      </div>
+      <img src="{{site.url}}/img/productImage.png" class="rdk-img-responsive-maxwidth"/>
+    </div>
+
+    <div class="row rdk-product hidden-lg">
+      <h3>Product</h3>
+      <h4>{{page.sitewordshash.productmain}}</h4>
+      <div class="desc">{{page.sitewordshash.productsub}}</div>
+      <img src="{{site.url}}/img/kuma-top-bottom.jpg" class="rdk-img-responsive"/>
+      <ul>
+        {% for data in page.productlist %}
+        <li>{{data}}</li>
+        {% endfor %}
+      </ul>
+      <button type="button" class="rdk-product-manual" onClick="window.open('{{site.url}}/{{page.lang.value}}/manual/')">{{page.sitewordshash.manual}}</button>
+    </div>
+
+    <div class="row rdk-usecase">
+      <img src="{{site.url}}/img/kuma-side-up.jpg" class="rdk-img-responsive">
+    </div>
+
+    <div class="row rdk-specification">
+      <hr class="rdk-specification-line">
+      <div class="col-md-12 rdk-block">
+        <div class="row">
+          <div class="col-md-12">
+            <h3>Specification</h3>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            {% for data in page.specificationlist %}
+            <div class="row">
+              <div class="col-md-4">
+                {{ data.item }}
+              </div>
+              <div class="col-md-8 rdk-specification-data-desc">
+                {{ data.desc }}
+              </div>
+            </div>
+            {% endfor %}
+            <div class="col-md-3"></div>
+          </div>
+        </div>
+        <div class="row rdk-specification-insert-order">
+          {% include insert-order.html %}
+        </div>
+      </div>
+    </div>
+
+    <div id="developers"></div>
+    <div class="row rdk-developers rdk-block">
+      <div class="col-md-12">
+        <h3>Developers</h3>
+        <div class="row">
+          <div class="col-md-4 rdk-devmenulist">
+            {% include developers-item.html type="firmware" %}
+            {% include developers-item.html type="manual" %}
+            {% include developers-item.html type="faq" %}
+            {% include developers-item.html type="forums" %}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="rdk-developers-button-div">
+  {% if include.type == 'console' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.githuburlconsole}}/releases/latest')"><h5>{{page.sitewordshash.consoletitle}}</h5>RICOH R Console</button>
+  {% elsif include.type == 'uvccapture' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.githuburluvccapture}}/releases/latest')"><h5>{{page.sitewordshash.uvccapturetitle}}</h5>RICOH R Development Kit UVC Capture</button>
+  {% elsif include.type == 'firmware' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.githuburlfirmware}}/releases/latest')"><h5>Firmware</h5>maruo2-camera Firmware</button>
+  {% elsif include.type == 'manual' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.url}}/{{page.lang.value}}/manual/')">{{page.sitewordshash.manual}}</button>
+  {% elsif include.type == 'youtubemanual' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.url}}/doc/360LiveStreamingGuideBook_{{page.lang.value}}.pdf')">{{page.sitewordshash.youtubemanual}}</button>
+  {% elsif include.type == 'faq' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.url}}/{{page.lang.value}}/faq/')">{{page.sitewordshash.faq}}</button>
+  {% elsif include.type == 'forums' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.forumsurl}}')">{{page.sitewordshash.developerforumslink}}</button>
+  {% elsif include.type == 'github' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.githuburl}}')">GitHub</button>
+  {% elsif include.type == 'mptreference' %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('{{site.githuburlmtpreference}}')">{{page.sitewordshash.mptreferencelink}}</button>
+  {% else %}
+    <button type="button" class="rdk-developers-button" onClick="window.open('')">!! ERROR-NAME-NOT-FIND !!</button>
+  {% endif %}
+  </div>
+</div>

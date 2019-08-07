@@ -1,0 +1,18 @@
+---
+layout: post
+title:  "本体ファームウェアおよびRICOH R Consoleアップデートのお知らせ"
+date:   2018-03-28 09:00:00 +0900
+category: news_ja
+lang:
+  value: ja
+---
+
+本体ファームウェアおよび映像コントロールツール RICOH R Consoleをアップデートしました。  
+変更点は以下の通りです。  
+・スリープモード対応 
+  
+  
+
+ファームウェア　： <a href='https://github.com/ricohr/r-dk-firmware/releases/latest' target='_blank'>https://github.com/ricohr/r-dk-firmware/releases/latest</a>    
+RICOH R Console ： <a href='https://github.com/ricohr/ricoh-r-console/releases/latest' target='_blank'>https://github.com/ricohr/ricoh-r-console/releases/latest</a>
+

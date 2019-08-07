@@ -1,0 +1,25 @@
+{% if include.title != nil %}
+<div class="rdk-samplemovie-box">
+  <div class="rdk-samplemovie-youtube" onClick="window.open('{{ include.youtubelink }}')">
+    <IMG src="{{site.url}}/img/sample-movie-thumbnail-{{ include.title }}.jpg">
+  </div>
+  <div class="rdk-samplemovie-memo">
+    Sample movie : {{ include.title }}<br/>
+    {{ include.mode }}<br/>
+    {{ include.recmode }}
+  </div>
+  <div class="rdk-samplemovie-memolink">
+    <a href="{{site.staticurl}}{{ include.dlpath }}" download="RICOH_R_DK_sample_{{ include.title }}.mp4">Sample movie file ({{ include.dlsize}})</a>
+  </div>
+</div>
+{% endif %}
+{% if include.title == nil %}
+<div class="rdk-samplemovie-box rdk-non-samplemovie">
+  <div class="rdk-samplemovie-youtube">
+    <IMG>
+  </div>
+  <div class="rdk-samplemovie-memo">
+    Sample movie : Coming soon
+  </div>
+</div>
+{% endif %}
